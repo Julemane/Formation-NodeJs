@@ -1,4 +1,4 @@
-const thing = requiere('../Models/Thing');
+const Thing = require('../Models/Thing');
 
 
 exports.createThing = (req, res, next) => {

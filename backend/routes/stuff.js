@@ -1,7 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const Thing = require('../Models/Thing');
-const stuffCtrl = require('..controllers/stuff');
+const stuffCtrl = require('../controllers/stuff');
 
 
 //poster un nouvel item
@@ -18,7 +17,7 @@ router.delete('/:id',stuffCtrl.deleteThing);
 router.get('/:id', stuffCtrl.retrieveItem);
   
 //récupérer tous les items
-  router.get('/', stuffCtrl.findItems);
+router.get('/', stuffCtrl.findItems);
 
 
 
