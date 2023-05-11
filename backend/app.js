@@ -2,6 +2,7 @@ const express = require('express');
 const mongoose = require('mongoose');
 const dotenv = require('dotenv').config();
 const stuffRoutes = require('./routes/stuff');
+const userRoutes = require('./routes/user');
 
 
 //connexion à la DB mongoDB à l'aide de mongoose
@@ -22,8 +23,9 @@ app.use((req, res, next) => {
 });
 
 app.use(express.json());
-//toutes les routes relative à ce endpoint sont definis dans stuff.js
+//toutes les routes relative à ces endpoint sont definis dans le dossier "routes"
 app.use('/api/stuff',stuffRoutes);
+app.use('/api/auth',userRoutes);
 
 
 module.exports = app;
